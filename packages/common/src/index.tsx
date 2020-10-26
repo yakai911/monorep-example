@@ -1,15 +1,22 @@
-import React, { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { Router } from "./Router";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
-    <View>
-      <Text>{count}</Text>
-      <Button title="增加" onPress={() => setCount(count + 1)}></Button>
+    <View style={styles.container}>
+      <Router />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5fcff",
+  },
+});
 
 export default App;
